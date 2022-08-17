@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>Prova DevWeb</title>
+  </head>
+  <body>
+    <div>
+      <table class="container-div">
+        <thead class="container-texts">
+          <tr class="titles">
+            <th>Categoria</th>
+            <th>Tipo</th>
+            <th>Dificuldade</th>
+            <th>Questão</th>
+            <th>Resposta Certa</th>
+            <th>Resposta Incorreta</th>
+          </tr>
+        </thead>
+        <tbody class="div-texts-descriptions">
+          <% for(var i = 0; i < questions.length; i++) { %>
+          <tr>
+            <td><%= questions[i].categoria %></td>
+            <td><%= questions[i].tipo %></td>
+            <td><%= questions[i].dificuldade %></td>
+            <td><%= questions[i].questao %></td>
+            <td><%= questions[i].questao_certa %></td>
+            <td><%= questions[i].questao_incorreta %></td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
